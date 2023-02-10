@@ -1,0 +1,18 @@
+.body {
+ min-height: 5rem;   
+ margin-top: 0px;
+ background-color: antiquewhite;
+ border-style: solid;
+ border-width: 2px;
+ border-color: rgb(204, 216, 216);
+}
+
+.header {
+ margin-top: 0%;
+ color: rgb(218, 164, 19);
+ text-align: center;
+ position: relative;
+ top: 0%;
+ line-height: 5rem;
+
+}

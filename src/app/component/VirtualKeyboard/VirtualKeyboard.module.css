@@ -1,0 +1,14 @@
+.style{
+    margin: 2%;
+    background-color: rgba(203, 231, 213, 0.707);
+    padding: 2%;
+    width: 40%;
+    text-align: center;
+    
+}
+
+.eachButton{
+    margin: 3%;
+    height: 30px;
+    width: 30px;
+}

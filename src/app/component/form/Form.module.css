@@ -1,0 +1,26 @@
+.body {
+width: 25%;
+height: 100%;
+min-height: 85vh;
+background-color: darkslategrey;
+margin-bottom: 0%;
+text-align: left ;
+}
+
+.label{
+margin: 6%;
+box-sizing: border-box;
+color: aliceblue;
+}
+
+.input{
+ margin-left: 6%; 
+ margin-bottom: 3%;  
+ appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
