@@ -18,24 +18,20 @@ const CreditCardForm = () => {
       // const numy = parseInt(enteredNumbersFromSlice.vkeyboard.newNumber);
       const ecn = enteredNumbersFromSlice.vkeyboard.enteredCardNumber;
       const esn = enteredNumbersFromSlice.vkeyboard.enteredSecurityNumber;
-      let shownFields = '';
-      if (ecn.length >= 0) {
-         if (isCardNo) {
-            ecn.forEach(element => {
-               shownFields = shownFields + element;
-               setEnteredCardNumber(shownFields);
-            });
-            // previousValue.current = enteredCardNumber;
-            // setEnteredCardNumber(previousValue.current +""+numy);
-         };
-         if (isSecurityNo) {
-            esn.forEach(element => {
-               shownFields = shownFields + element;
-               setEnteredSecurityNumber(shownFields);
-            });
-            // setEnteredSecurityNumber(previousValue.current +""+numy);
-         }
+      // let shownFields = '';
+      if (isCardNo) {
+         setEnteredCardNumber(ecn.join(""));
+         // previousValue.current = enteredCardNumber;
+         // setEnteredCardNumber(previousValue.current +""+numy);
       };
+      if (isSecurityNo) {
+         //  esn.forEach(element => {
+         // shownFields = shownFields + element;
+         setEnteredSecurityNumber(esn.join(""));
+         // });
+         // setEnteredSecurityNumber(previousValue.current +""+numy);
+      };
+
    }, [enteredNumbersFromSlice.vkeyboard.enteredCardNumber, enteredNumbersFromSlice.vkeyboard.enteredSecurityNumber])
 
    const touchedField = event => {
@@ -48,7 +44,6 @@ const CreditCardForm = () => {
             enteredCardNumber: enteredCardNumber
          };
          dispatch(vkActions.booleanSetter(data));
-
       };
       if (event.target.id === 'securityNumber') {
          setIsCardNo(false);
@@ -61,7 +56,6 @@ const CreditCardForm = () => {
          dispatch(vkActions.booleanSetter(data));
       };
    };
-
    return (
       <div>
          <form className={classes.body}>
